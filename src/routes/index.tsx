@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       { title: "Nexus Discord Solutions — Premium Discord Agency" },
       { name: "description", content: "We design, build, secure and manage professional Discord communities. Custom bots, verification, moderation and 24/7 support." },
       { property: "og:title", content: "Nexus Discord Solutions — Premium Discord Agency" },
-      { property: "og:description", content: "Secure. Organized. Automated. Trusted by gaming, Web3, creators and SaaS brands." },
+      { property: "og:description", content: "We design, build, secure and manage professional Discord communities. Custom bots, verification, moderation and 24/7 support." },
     ],
   }),
   component: HomePage,
