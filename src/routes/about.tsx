@@ -3,6 +3,12 @@ import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Linkedin, Twitter, Github, MessageCircle, Target, Shield, Rocket, Heart } from "lucide-react";
+import face9 from "@/assets/Face_9.jpeg.asset.json";
+import face11 from "@/assets/Face_11.jpeg.asset.json";
+import face7 from "@/assets/Face_7.jpeg.asset.json";
+import face8 from "@/assets/Face_8.jpeg.asset.json";
+import face10 from "@/assets/Face_10.jpeg.asset.json";
+import face6 from "@/assets/Face_6.jpeg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -17,15 +23,16 @@ export const Route = createFileRoute("/about")({
 });
 
 const team = [
-  { name: "Ethan Carter", role: "Founder & CEO", bio: "Leads strategy, client relationships and business development.", socials: ["li", "x"] },
-  { name: "Sophia Bennett", role: "Project Manager", bio: "Coordinates every project from kickoff to launch.", socials: ["li", "x"] },
-  { name: "Liam Brooks", role: "Senior Discord Developer", bio: "Server architecture, permissions and verification systems.", socials: ["gh", "d"] },
-  { name: "Noah Walker", role: "Bot & Automation Engineer", bio: "Custom bots, AI integrations and advanced automation.", socials: ["gh", "x"] },
-  { name: "Ava Mitchell", role: "UI/UX & Brand Designer", bio: "Server layouts, branding, icons and banners.", socials: ["li", "x"] },
-  { name: "Mason Reed", role: "Community & Support Manager", bio: "Client support, engagement and moderator training.", socials: ["d", "x"] },
+  { name: "Ethan Carter", role: "Founder & CEO", bio: "Leads strategy, client relationships and business development.", socials: ["li", "x"], avatar: face9.url },
+  { name: "Sophia Bennett", role: "Project Manager", bio: "Coordinates every project from kickoff to launch.", socials: ["li", "x"], avatar: face11.url },
+  { name: "Liam Brooks", role: "Senior Discord Developer", bio: "Server architecture, permissions and verification systems.", socials: ["gh", "d"], avatar: face7.url },
+  { name: "Noah Walker", role: "Bot & Automation Engineer", bio: "Custom bots, AI integrations and advanced automation.", socials: ["gh", "x"], avatar: face8.url },
+  { name: "Ava Mitchell", role: "UI/UX & Brand Designer", bio: "Server layouts, branding, icons and banners.", socials: ["li", "x"], avatar: face10.url },
+  { name: "Mason Reed", role: "Community & Support Manager", bio: "Client support, engagement and moderator training.", socials: ["d", "x"], avatar: face6.url },
 ];
 
 const socialIcon = { li: Linkedin, x: Twitter, gh: Github, d: MessageCircle } as const;
+
 
 const values = [
   { icon: Shield, t: "Security first", d: "Every server is hardened against raids, spam and abuse by default." },
@@ -81,9 +88,11 @@ function AboutPage() {
             {team.map((m) => (
               <Card key={m.name} className="glass group relative overflow-hidden border-border p-6 transition hover:border-brand/50 hover:shadow-elegant">
                 <div className="flex items-center gap-4">
-                  <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-brand to-accent text-xl font-bold text-white shadow-glow">
-                    {m.name.split(" ").map((n) => n[0]).join("")}
-                  </div>
+                  <img
+                    src={m.avatar}
+                    alt={m.name}
+                    className="h-16 w-16 rounded-full object-cover shadow-glow ring-2 ring-brand/40"
+                  />
                   <div>
                     <div className="font-display text-lg font-semibold">{m.name}</div>
                     <Badge variant="outline" className="mt-1 border-brand/40 text-brand-glow">{m.role}</Badge>
