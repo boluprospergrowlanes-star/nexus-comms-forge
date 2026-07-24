@@ -5,6 +5,22 @@ import { Badge } from "@/components/ui/badge";
 import { Linkedin, Twitter } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import oliverBennett from "@/assets/oliver-bennett.jpg.asset.json";
+import face6 from "@/assets/Face_6.jpeg.asset.json";
+import face7 from "@/assets/Face_7.jpeg.asset.json";
+import face8 from "@/assets/Face_8.jpeg.asset.json";
+import face9 from "@/assets/Face_9.jpeg.asset.json";
+import face10 from "@/assets/Face_10.jpeg.asset.json";
+import face11 from "@/assets/Face_11.jpeg.asset.json";
+
+const team = [
+  { name: "Ethan Carter", role: "Lead Discord Architect", img: face9.url, bio: "Designs scalable server structures and permission systems." },
+  { name: "Sophia Bennett", role: "Head of Design", img: face11.url, bio: "Crafts branded visuals, banners and role icons that pop." },
+  { name: "Liam Brooks", role: "Senior Bot Developer", img: face7.url, bio: "Builds custom bots and automation tailored to each client." },
+  { name: "Noah Walker", role: "Automation Engineer", img: face8.url, bio: "Wires up workflows, integrations and AI-powered systems." },
+  { name: "Ava Mitchell", role: "Community Manager", img: face10.url, bio: "Grows engaged communities with smart moderation strategy." },
+  { name: "Mason Reed", role: "Client Success Lead", img: face6.url, bio: "Your point of contact from kickoff to launch and beyond." },
+];
+
 
 export const Route = createFileRoute("/team")({
   head: () => ({
@@ -41,9 +57,49 @@ function TeamPage() {
           <FounderProfile />
         </div>
       </section>
+
+      <section className="container-nds py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold md:text-5xl">
+            Meet Our <span className="gradient-text">Team</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            A tight-knit crew of Discord architects, engineers, designers and community experts.
+          </p>
+        </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((m) => (
+            <Card key={m.name} className="group overflow-hidden border-border bg-card p-0">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={`${m.name} — ${m.role}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold">{m.name}</h3>
+                <div className="mt-1 text-sm text-brand-glow">{m.role}</div>
+                <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
+                <div className="mt-4 flex gap-2">
+                  <a href="#" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
+
 
 function FounderProfile() {
   const { ref: imageRef, isVisible: imageVisible } = useScrollReveal<HTMLDivElement>();
