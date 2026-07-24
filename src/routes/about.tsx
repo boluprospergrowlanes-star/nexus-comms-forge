@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Target, Shield, Rocket, Heart, Linkedin, Twitter } from "lucide-react";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import oliverBennett from "@/assets/oliver-bennett.jpg.asset.json";
+import { Target, Shield, Rocket, Heart } from "lucide-react";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
