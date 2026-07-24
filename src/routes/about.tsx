@@ -57,49 +57,19 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* TEAM */}
+      {/* FOUNDER */}
       <section className="border-y border-border/60 bg-card/30">
         <div className="container-nds py-20">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold md:text-5xl">
-              Meet the Experts Behind <span className="gradient-text">Nexus</span>
+              Meet Our <span className="gradient-text">Founder</span>
             </h2>
             <p className="mt-4 text-muted-foreground">
-              A team of Discord architects, engineers and designers committed to delivering
-              professional Discord solutions — from first message to long after launch.
+              The vision behind Nexus Discord Solutions — building secure, scalable and
+              high-performing communities worldwide.
             </p>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {team.map((m) => (
-              <Card key={m.name} className="glass group relative overflow-hidden border-border p-6 transition hover:border-brand/50 hover:shadow-elegant">
-                <div className="flex items-center gap-4">
-                  <img
-                    src={m.avatar}
-                    alt={m.name}
-                    className="h-16 w-16 rounded-full object-cover shadow-glow ring-2 ring-brand/40"
-                  />
-                  <div>
-                    <div className="font-display text-lg font-semibold">{m.name}</div>
-                    <Badge variant="outline" className="mt-1 border-brand/40 text-brand-glow">{m.role}</Badge>
-                  </div>
-                </div>
-                <p className="mt-4 text-sm text-muted-foreground">{m.bio}</p>
-                <div className="mt-5 flex items-center justify-between border-t border-border/60 pt-4">
-                  <div className="flex gap-1.5">
-                    {m.socials.map((s) => {
-                      const Icon = socialIcon[s as keyof typeof socialIcon];
-                      return (
-                        <a key={s} href="#" className="grid h-8 w-8 place-items-center rounded-md bg-surface text-muted-foreground transition hover:text-brand-glow" aria-label={s}>
-                          <Icon className="h-3.5 w-3.5" />
-                        </a>
-                      );
-                    })}
-                  </div>
-                  <a href="/contact" className="text-xs font-button font-semibold uppercase tracking-wider text-brand-glow hover:underline">Contact</a>
-                </div>
-              </Card>
-            ))}
-          </div>
+          <FounderProfile />
         </div>
       </section>
 
