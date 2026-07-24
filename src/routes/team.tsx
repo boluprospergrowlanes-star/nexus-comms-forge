@@ -57,9 +57,49 @@ function TeamPage() {
           <FounderProfile />
         </div>
       </section>
+
+      <section className="container-nds py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold md:text-5xl">
+            Meet Our <span className="gradient-text">Team</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            A tight-knit crew of Discord architects, engineers, designers and community experts.
+          </p>
+        </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((m) => (
+            <Card key={m.name} className="group overflow-hidden border-border bg-card p-0">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={`${m.name} — ${m.role}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold">{m.name}</h3>
+                <div className="mt-1 text-sm text-brand-glow">{m.role}</div>
+                <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
+                <div className="mt-4 flex gap-2">
+                  <a href="#" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                  <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
+
 
 function FounderProfile() {
   const { ref: imageRef, isVisible: imageVisible } = useScrollReveal<HTMLDivElement>();
