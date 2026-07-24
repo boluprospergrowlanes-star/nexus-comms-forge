@@ -57,21 +57,8 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* FOUNDER */}
-      <section className="border-y border-border/60 bg-card/30">
-        <div className="container-nds py-20">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold md:text-5xl">
-              Meet Our <span className="gradient-text">Founder</span>
-            </h2>
-            <p className="mt-4 text-muted-foreground">
-              The vision behind Nexus Discord Solutions — building secure, scalable and
-              high-performing communities worldwide.
-            </p>
-          </div>
-          <FounderProfile />
-        </div>
-      </section>
+
+
 
       {/* TIMELINE */}
       <section className="container-nds py-20">
