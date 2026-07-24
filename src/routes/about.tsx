@@ -100,10 +100,6 @@ function FounderProfile() {
   const { ref: imageRef, isVisible: imageVisible } = useScrollReveal<HTMLDivElement>();
   const { ref: textRef, isVisible: textVisible } = useScrollReveal<HTMLDivElement>();
 
-function FounderProfile() {
-  const { ref: imageRef, isVisible: imageVisible } = useScrollReveal<HTMLDivElement>();
-  const { ref: textRef, isVisible: textVisible } = useScrollReveal<HTMLDivElement>();
-
   return (
     <Card className="glass relative mt-14 overflow-hidden border-border p-6 sm:p-8 lg:p-10">
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
