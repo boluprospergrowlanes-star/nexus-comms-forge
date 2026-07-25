@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Linkedin, Twitter } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import oliverBennett from "@/assets/oliver-bennett.jpg.asset.json";
 import face6 from "@/assets/Face_6.jpeg.asset.json";
