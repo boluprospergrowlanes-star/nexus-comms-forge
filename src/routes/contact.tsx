@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MessageCircle, Clock, HelpCircle, Send, Twitter, Linkedin, Github } from "lucide-react";
+import { Clock, HelpCircle, Send } from "lucide-react";
 import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { z } from "zod";
+
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
