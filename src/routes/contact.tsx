@@ -58,8 +58,6 @@ function ContactPage() {
         {/* Info */}
         <div className="space-y-4">
           {[
-            { icon: Mail, t: "Email", v: "hello@nexusdiscord.dev" },
-            { icon: MessageCircle, t: "Discord", v: "discord.gg/nexus" },
             { icon: Clock, t: "Support hours", v: "Mon–Sun · 8am–10pm UTC" },
             { icon: HelpCircle, t: "FAQ", v: "See our FAQ page" },
           ].map((i) => (
@@ -73,17 +71,8 @@ function ContactPage() {
               </div>
             </Card>
           ))}
-          <Card className="border-border bg-card p-5">
-            <div className="mb-3 text-xs uppercase tracking-widest text-muted-foreground">Follow us</div>
-            <div className="flex gap-2">
-              {[Twitter, Linkedin, Github, MessageCircle].map((Icon, i) => (
-                <a key={i} href="#" className="grid h-10 w-10 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:text-brand-glow" aria-label="Social">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-          </Card>
         </div>
+
 
         {/* Form */}
         <Card className="border-border bg-card p-8">
