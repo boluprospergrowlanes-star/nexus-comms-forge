@@ -22,7 +22,7 @@ function PrivacyPage() {
         <div><h3 className="mb-2 font-display text-xl font-semibold text-foreground">Information we collect</h3><p>Contact details you provide via forms (name, email, message), and basic analytics needed to operate the site.</p></div>
         <div><h3 className="mb-2 font-display text-xl font-semibold text-foreground">How we use it</h3><p>To respond to your inquiries, deliver services you've purchased, and improve our website.</p></div>
         <div><h3 className="mb-2 font-display text-xl font-semibold text-foreground">Data sharing</h3><p>We do not sell your data. We only share information with subprocessors strictly required to deliver services.</p></div>
-        <div><h3 className="mb-2 font-display text-xl font-semibold text-foreground">Your rights</h3><p>You may request access, correction or deletion of your data at any time by contacting hello@nexusdiscord.dev.</p></div>
+        <div><h3 className="mb-2 font-display text-xl font-semibold text-foreground">Your rights</h3><p>You may request access, correction or deletion of your data at any time by reaching out through our contact page.</p></div>
         <p className="text-xs">Last updated: 2026-07-22</p>
       </section>
     </>
