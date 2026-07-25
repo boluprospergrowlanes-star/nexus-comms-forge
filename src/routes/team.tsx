@@ -139,20 +139,6 @@ function FounderProfile() {
           </p>
           <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start">
             <a
-              href="#"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a
               href="/contact"
               className="inline-flex h-11 items-center rounded-xl bg-brand px-6 text-sm font-semibold text-white shadow-glow transition hover:bg-brand/90"
             >
