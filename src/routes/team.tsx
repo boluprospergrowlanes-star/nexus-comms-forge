@@ -82,14 +82,6 @@ function TeamPage() {
                 <h3 className="text-xl font-semibold">{m.name}</h3>
                 <div className="mt-1 text-sm text-brand-glow">{m.role}</div>
                 <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
-                <div className="mt-4 flex gap-2">
-                  <a href="#" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                  <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
-                    <Twitter className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
             </Card>
           ))}
