@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Linkedin, Twitter } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import oliverBennett from "@/assets/oliver-bennett.jpg.asset.json";
 import face6 from "@/assets/Face_6.jpeg.asset.json";
@@ -83,14 +82,6 @@ function TeamPage() {
                 <h3 className="text-xl font-semibold">{m.name}</h3>
                 <div className="mt-1 text-sm text-brand-glow">{m.role}</div>
                 <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
-                <div className="mt-4 flex gap-2">
-                  <a href="#" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                  <a href="#" aria-label="Twitter" className="grid h-9 w-9 place-items-center rounded-lg bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow">
-                    <Twitter className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
             </Card>
           ))}
@@ -147,20 +138,6 @@ function FounderProfile() {
             growth strategies, helping clients build engaging and successful online communities.
           </p>
           <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start">
-            <a
-              href="#"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-surface text-muted-foreground transition hover:bg-brand/15 hover:text-brand-glow"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
             <a
               href="/contact"
               className="inline-flex h-11 items-center rounded-xl bg-brand px-6 text-sm font-semibold text-white shadow-glow transition hover:bg-brand/90"
