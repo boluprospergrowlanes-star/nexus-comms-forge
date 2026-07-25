@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
-import { Github, Twitter, Linkedin, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,19 +14,8 @@ export function Footer() {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground/70">
             Secure. Organized. Automated.
           </p>
-          <div className="flex gap-2">
-            {[Twitter, Linkedin, Github, MessageCircle].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="grid h-9 w-9 place-items-center rounded-lg border border-border bg-surface text-muted-foreground transition hover:border-brand hover:text-foreground"
-                aria-label="Social link"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
         </div>
+
         <div>
           <h4 className="mb-3 text-sm font-semibold text-foreground">Company</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
