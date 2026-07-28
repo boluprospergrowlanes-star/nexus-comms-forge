@@ -3,6 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PageHero } from "@/components/nds/PageHero";
 import { Quote } from "lucide-react";
+import p1 from "@/assets/portfolio-1.jpg.asset.json";
+import p2 from "@/assets/portfolio-2.jpg.asset.json";
+import p3 from "@/assets/portfolio-3.jpg.asset.json";
+import p4 from "@/assets/portfolio-4.jpg.asset.json";
+import p5 from "@/assets/portfolio-5.jpg.asset.json";
+import p6 from "@/assets/portfolio-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -17,12 +23,12 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 const projects = [
-  { title: "PixelForge Gaming", type: "Gaming Community", members: "24k", features: ["Custom bot", "Anti-raid", "Ranked roles", "Tournaments"], tech: ["Discord.js", "PostgreSQL", "Redis"], feedback: "Doubled engagement, zero raids in 6 months.", gradient: "from-brand to-secondary" },
-  { title: "Aether NFT", type: "Web3 / NFT", members: "18k", features: ["Wallet verify", "Token gating", "Mint alerts"], tech: ["Ethers.js", "Alchemy", "Node.js"], feedback: "Best onboarding flow we've ever had.", gradient: "from-accent to-brand" },
-  { title: "StackFlow SaaS", type: "SaaS Community", members: "9k", features: ["AI support bot", "Ticket system", "Docs sync"], tech: ["OpenAI", "Supabase", "Vercel"], feedback: "Fully automated tier-1 support.", gradient: "from-secondary to-accent" },
-  { title: "Nova Creators", type: "Creator Hub", members: "31k", features: ["Fan tiers", "Event bot", "Reaction roles"], tech: ["Discord.js", "Stripe"], feedback: "Turned our Discord into revenue.", gradient: "from-brand-glow to-accent" },
-  { title: "Vanguard Esports", type: "Esports Team", members: "12k", features: ["Match scheduler", "Scrim finder", "Elo tracking"], tech: ["Node.js", "MongoDB"], feedback: "Streamlined our whole competitive stack.", gradient: "from-secondary to-brand" },
-  { title: "Meridian Studios", type: "Business Server", members: "3k", features: ["Client portal", "Invoice bot", "Onboarding"], tech: ["Next.js", "Stripe"], feedback: "Professional from day one.", gradient: "from-accent to-brand-glow" },
+  { title: "PixelForge Gaming", type: "Gaming Community", members: "24k", features: ["Custom bot", "Anti-raid", "Ranked roles", "Tournaments"], tech: ["Discord.js", "PostgreSQL", "Redis"], feedback: "Doubled engagement, zero raids in 6 months.", gradient: "from-brand to-secondary", img: p1.url },
+  { title: "Aether NFT", type: "Web3 / NFT", members: "18k", features: ["Wallet verify", "Token gating", "Mint alerts"], tech: ["Ethers.js", "Alchemy", "Node.js"], feedback: "Best onboarding flow we've ever had.", gradient: "from-accent to-brand", img: p2.url },
+  { title: "StackFlow SaaS", type: "SaaS Community", members: "9k", features: ["AI support bot", "Ticket system", "Docs sync"], tech: ["OpenAI", "Supabase", "Vercel"], feedback: "Fully automated tier-1 support.", gradient: "from-secondary to-accent", img: p3.url },
+  { title: "Nova Creators", type: "Creator Hub", members: "31k", features: ["Fan tiers", "Event bot", "Reaction roles"], tech: ["Discord.js", "Stripe"], feedback: "Turned our Discord into revenue.", gradient: "from-brand-glow to-accent", img: p4.url },
+  { title: "Vanguard Esports", type: "Esports Team", members: "12k", features: ["Match scheduler", "Scrim finder", "Elo tracking"], tech: ["Node.js", "MongoDB"], feedback: "Streamlined our whole competitive stack.", gradient: "from-secondary to-brand", img: p5.url },
+  { title: "Meridian Studios", type: "Business Server", members: "3k", features: ["Client portal", "Invoice bot", "Onboarding"], tech: ["Next.js", "Stripe"], feedback: "Professional from day one.", gradient: "from-accent to-brand-glow", img: p6.url },
 ];
 
 function PortfolioPage() {
@@ -37,8 +43,16 @@ function PortfolioPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <Card key={p.title} className="group overflow-hidden border-border bg-card p-0 transition hover:border-brand/50 hover:shadow-elegant">
-              <div className={`relative h-40 bg-gradient-to-br ${p.gradient}`}>
-                <div className="absolute inset-0 grid-bg opacity-40 mix-blend-overlay" />
+              <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+                <img
+                  src={p.img}
+                  alt={`${p.title} — ${p.type} Discord project`}
+                  loading="lazy"
+                  width={1024}
+                  height={576}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
                 <div className="absolute bottom-3 left-4 text-white/90">
                   <div className="text-xs uppercase tracking-widest opacity-80">{p.type}</div>
                   <div className="font-display text-xl font-bold">{p.title}</div>
