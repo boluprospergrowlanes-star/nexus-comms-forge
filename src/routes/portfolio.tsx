@@ -48,8 +48,10 @@ function PortfolioPage() {
                   src={p.img}
                   alt={`${p.title} — ${p.type} Discord project`}
                   loading="lazy"
+                  decoding="async"
                   width={1024}
                   height={576}
+                  onError={(e) => { e.currentTarget.style.display = "none"; }}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
