@@ -3,6 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PageHero } from "@/components/nds/PageHero";
 import { Quote } from "lucide-react";
+import p1 from "@/assets/portfolio-1.jpg.asset.json";
+import p2 from "@/assets/portfolio-2.jpg.asset.json";
+import p3 from "@/assets/portfolio-3.jpg.asset.json";
+import p4 from "@/assets/portfolio-4.jpg.asset.json";
+import p5 from "@/assets/portfolio-5.jpg.asset.json";
+import p6 from "@/assets/portfolio-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
