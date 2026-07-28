@@ -43,8 +43,16 @@ function PortfolioPage() {
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <Card key={p.title} className="group overflow-hidden border-border bg-card p-0 transition hover:border-brand/50 hover:shadow-elegant">
-              <div className={`relative h-40 bg-gradient-to-br ${p.gradient}`}>
-                <div className="absolute inset-0 grid-bg opacity-40 mix-blend-overlay" />
+              <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
+                <img
+                  src={p.img}
+                  alt={`${p.title} — ${p.type} Discord project`}
+                  loading="lazy"
+                  width={1024}
+                  height={576}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
                 <div className="absolute bottom-3 left-4 text-white/90">
                   <div className="text-xs uppercase tracking-widest opacity-80">{p.type}</div>
                   <div className="font-display text-xl font-bold">{p.title}</div>
