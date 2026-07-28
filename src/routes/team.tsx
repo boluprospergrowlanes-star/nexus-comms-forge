@@ -139,7 +139,9 @@ function FounderProfile() {
           </p>
           <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-4 lg:justify-start">
             <a
-              href="/contact"
+              href="https://discord.com/channels/@me/1531482908332654662"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex h-11 items-center rounded-xl bg-brand px-6 text-sm font-semibold text-white shadow-glow transition hover:bg-brand/90"
             >
               Get in touch
