@@ -3,21 +3,21 @@ import { PageHero } from "@/components/nds/PageHero";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import oliverBennett from "@/assets/oliver-bennett.jpg.asset.json";
-import face6 from "@/assets/Face_6.jpeg.asset.json";
-import face7 from "@/assets/Face_7.jpeg.asset.json";
-import face8 from "@/assets/Face_8.jpeg.asset.json";
-import face9 from "@/assets/Face_9.jpeg.asset.json";
-import face10 from "@/assets/Face_10.jpeg.asset.json";
-import face11 from "@/assets/Face_11.jpeg.asset.json";
+import oliverBennett from "@/assets/oliver-bennett.jpg";
+import face6 from "@/assets/Face_6.jpeg";
+import face7 from "@/assets/Face_7.jpeg";
+import face8 from "@/assets/Face_8.jpeg";
+import face9 from "@/assets/Face_9.jpeg";
+import face10 from "@/assets/Face_10.jpeg";
+import face11 from "@/assets/Face_11.jpeg";
 
 const team = [
-  { name: "Ethan Carter", role: "Lead Discord Architect", img: face9.url, bio: "Designs scalable server structures and permission systems." },
-  { name: "Sophia Bennett", role: "Head of Design", img: face11.url, bio: "Crafts branded visuals, banners and role icons that pop." },
-  { name: "Liam Brooks", role: "Senior Bot Developer", img: face7.url, bio: "Builds custom bots and automation tailored to each client." },
-  { name: "Noah Walker", role: "Automation Engineer", img: face8.url, bio: "Wires up workflows, integrations and AI-powered systems." },
-  { name: "Ava Mitchell", role: "Community Manager", img: face10.url, bio: "Grows engaged communities with smart moderation strategy." },
-  { name: "Mason Reed", role: "Client Success Lead", img: face6.url, bio: "Your point of contact from kickoff to launch and beyond." },
+  { name: "Ethan Carter", role: "Lead Discord Architect", img: face9, bio: "Designs scalable server structures and permission systems." },
+  { name: "Sophia Bennett", role: "Head of Design", img: face11, bio: "Crafts branded visuals, banners and role icons that pop." },
+  { name: "Liam Brooks", role: "Senior Bot Developer", img: face7, bio: "Builds custom bots and automation tailored to each client." },
+  { name: "Noah Walker", role: "Automation Engineer", img: face8, bio: "Wires up workflows, integrations and AI-powered systems." },
+  { name: "Ava Mitchell", role: "Community Manager", img: face10, bio: "Grows engaged communities with smart moderation strategy." },
+  { name: "Mason Reed", role: "Client Success Lead", img: face6, bio: "Your point of contact from kickoff to launch and beyond." },
 ];
 
 
@@ -105,7 +105,7 @@ function FounderProfile() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl ring-1 ring-brand/30 shadow-elegant">
             <img
-              src={oliverBennett.url}
+              src={oliverBennett}
               alt="Oliver Bennett — Founder & CEO of Nexus Discord Solutions"
               loading="lazy"
               width={1024}
