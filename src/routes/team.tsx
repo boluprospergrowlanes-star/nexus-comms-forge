@@ -25,7 +25,7 @@ export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
       { title: "Team — Nexus Discord Solutions" },
-      { name: "description", content: "Meet Oliver Bennett, Founder & CEO of Nexus Discord Solutions — building secure, scalable and high-performing Discord communities." },
+      { name: "description", content: "Meet Olive Bennet, Founder & CEO of Nexus Discord Solutions — building secure, scalable and high-performing Discord communities." },
       { property: "og:title", content: "Team — Nexus Discord Solutions" },
       { property: "og:description", content: "Meet the founder behind Nexus Discord Solutions." },
     ],
@@ -106,7 +106,7 @@ function FounderProfile() {
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl ring-1 ring-brand/30 shadow-elegant">
             <img
               src={oliverBennett}
-              alt="Oliver Bennett — Founder & CEO of Nexus Discord Solutions"
+              alt="Olive Bennet — Founder & CEO of Nexus Discord Solutions"
               loading="lazy"
               width={1024}
               height={1024}
@@ -122,7 +122,7 @@ function FounderProfile() {
           className={`flex flex-col items-start text-center lg:text-left ${textVisible ? "animate-fade-in-right animation-delay-200" : "opacity-0"}`}
         >
           <h3 className="w-full text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Oliver Bennett
+            Olive Bennet
           </h3>
           <Badge
             variant="outline"
@@ -131,7 +131,7 @@ function FounderProfile() {
             Founder & CEO
           </Badge>
           <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Oliver Bennett is the Founder & CEO of Nexus Discord Solutions, specializing in
+            Olive Bennet is the Founder & CEO of Nexus Discord Solutions, specializing in
             building secure, scalable, and high-performing Discord communities for gaming studios,
             Web3 projects, SaaS businesses, content creators, and online brands. He has expertise in
             Discord server development, automation, moderation systems, custom bots, and community
