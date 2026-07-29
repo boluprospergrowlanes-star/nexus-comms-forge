@@ -3,12 +3,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PageHero } from "@/components/nds/PageHero";
 import { Quote } from "lucide-react";
-import p1 from "@/assets/portfolio-1.jpg.asset.json";
-import p2 from "@/assets/portfolio-2.jpg.asset.json";
-import p3 from "@/assets/portfolio-3.jpg.asset.json";
-import p4 from "@/assets/portfolio-4.jpg.asset.json";
-import p5 from "@/assets/portfolio-5.jpg.asset.json";
-import p6 from "@/assets/portfolio-6.jpg.asset.json";
+import p1 from "@/assets/portfolio-1.jpg";
+import p2 from "@/assets/portfolio-2.jpg";
+import p3 from "@/assets/portfolio-3.jpg";
+import p4 from "@/assets/portfolio-4.jpg";
+import p5 from "@/assets/portfolio-5.jpg";
+import p6 from "@/assets/portfolio-6.jpg";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -23,12 +23,12 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 const projects = [
-  { title: "PixelForge Gaming", type: "Gaming Community", members: "24k", features: ["Custom bot", "Anti-raid", "Ranked roles", "Tournaments"], tech: ["Discord.js", "PostgreSQL", "Redis"], feedback: "Doubled engagement, zero raids in 6 months.", gradient: "from-brand to-secondary", img: p1.url },
-  { title: "Aether NFT", type: "Web3 / NFT", members: "18k", features: ["Wallet verify", "Token gating", "Mint alerts"], tech: ["Ethers.js", "Alchemy", "Node.js"], feedback: "Best onboarding flow we've ever had.", gradient: "from-accent to-brand", img: p2.url },
-  { title: "StackFlow SaaS", type: "SaaS Community", members: "9k", features: ["AI support bot", "Ticket system", "Docs sync"], tech: ["OpenAI", "Supabase", "Vercel"], feedback: "Fully automated tier-1 support.", gradient: "from-secondary to-accent", img: p3.url },
-  { title: "Nova Creators", type: "Creator Hub", members: "31k", features: ["Fan tiers", "Event bot", "Reaction roles"], tech: ["Discord.js", "Stripe"], feedback: "Turned our Discord into revenue.", gradient: "from-brand-glow to-accent", img: p4.url },
-  { title: "Vanguard Esports", type: "Esports Team", members: "12k", features: ["Match scheduler", "Scrim finder", "Elo tracking"], tech: ["Node.js", "MongoDB"], feedback: "Streamlined our whole competitive stack.", gradient: "from-secondary to-brand", img: p5.url },
-  { title: "Meridian Studios", type: "Business Server", members: "3k", features: ["Client portal", "Invoice bot", "Onboarding"], tech: ["Next.js", "Stripe"], feedback: "Professional from day one.", gradient: "from-accent to-brand-glow", img: p6.url },
+  { title: "PixelForge Gaming", type: "Gaming Community", members: "24k", features: ["Custom bot", "Anti-raid", "Ranked roles", "Tournaments"], tech: ["Discord.js", "PostgreSQL", "Redis"], feedback: "Doubled engagement, zero raids in 6 months.", gradient: "from-brand to-secondary", img: p1 },
+  { title: "Aether NFT", type: "Web3 / NFT", members: "18k", features: ["Wallet verify", "Token gating", "Mint alerts"], tech: ["Ethers.js", "Alchemy", "Node.js"], feedback: "Best onboarding flow we've ever had.", gradient: "from-accent to-brand", img: p2 },
+  { title: "StackFlow SaaS", type: "SaaS Community", members: "9k", features: ["AI support bot", "Ticket system", "Docs sync"], tech: ["OpenAI", "Supabase", "Vercel"], feedback: "Fully automated tier-1 support.", gradient: "from-secondary to-accent", img: p3 },
+  { title: "Nova Creators", type: "Creator Hub", members: "31k", features: ["Fan tiers", "Event bot", "Reaction roles"], tech: ["Discord.js", "Stripe"], feedback: "Turned our Discord into revenue.", gradient: "from-brand-glow to-accent", img: p4 },
+  { title: "Vanguard Esports", type: "Esports Team", members: "12k", features: ["Match scheduler", "Scrim finder", "Elo tracking"], tech: ["Node.js", "MongoDB"], feedback: "Streamlined our whole competitive stack.", gradient: "from-secondary to-brand", img: p5 },
+  { title: "Meridian Studios", type: "Business Server", members: "3k", features: ["Client portal", "Invoice bot", "Onboarding"], tech: ["Next.js", "Stripe"], feedback: "Professional from day one.", gradient: "from-accent to-brand-glow", img: p6 },
 ];
 
 function PortfolioPage() {
